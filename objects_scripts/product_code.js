@@ -63,31 +63,14 @@ function parsePartCode(code) {
 // create a variable holding some product code
 let potato = "XYZ:1234-L"
 
+//run the function and assing the return value to a variable
+let parsedCode = parsePartCode(potato);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//work with the variable to diplay the information in the console
+console.log(`
+Supplier: ${parsedCode.supplierCode}
+Product Number: ${parsedCode.productNumber}
+Size: ${parsedCode.size}
+`);
 
     */
