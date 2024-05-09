@@ -1,5 +1,16 @@
 "use strict"
+/*
 
+
+                            ╱|、
+                          (˚ˎ 。7  
+                           |、˜〵          
+                          じしˍ,)ノ
+
+
+
+
+*/
 // this is a list of lunch reciepts (objects that represents a meal)
 let lunchOrder = [
     { item: "Steak Fajitas", price: 9.95 },
