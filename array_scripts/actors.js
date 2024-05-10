@@ -23,6 +23,7 @@ let academyMembers = [
     },
 ];
 
+// get the length of the list so we know how many times to loop
 let numberOfAcademyMembers = academyMembers.length;
 
 
@@ -51,34 +52,53 @@ for (let i = 0; i < numberOfAcademyMembers; i++) {
     }
 }
 
-// for (let i = 0; i < numberOfAcademyMembers; i++) {
-//     if (academyMembers[i].name.indexOf("Bob") !== -1) {          !==  <-- this means not equal too
-//         console.log(`${academyMembers[i].name} has a name that starts with bob`)
-//     }
-// }
 
-// films with the letter a
+// films with the letter "A"
 for (let i = 0; i < numberOfAcademyMembers; i++) {
-    if (academyMembers[i].films.indexOf("A") === 0) {
-        console.log(`${academyMembers[i].name} has a films with the letter a`)
+    if (academyMembers[i].films.some(film => film.includes("A"))) {
+        console.log(`${academyMembers[i].name} has a films with the letter "A"`);
     }
 }
+// found this solution in GPT
+// .some checks if at least one element in the array satisfies the provided condition, which in this case its true
+// `film => film.includes("A")` is an arrow function that checks if the film name includes the letter "A"
+
+// the one below is eric solution line 86
+// for(let i=0; i < numberOfAcademyMembers; i++){
+
+//     //look for the member with the memID of 187 and display their name
+//     if(academyMembers[i].memID === 187){
+//         console.log(`${academyMembers[i].name} is memberID 187`);
+//     }
+
+//     //how many members have been in at least 3 films
+//     if( academyMembers[i].films.length >= 3 ){
+//         console.log(`${academyMembers[i].name} is in the 3 or more film club`);
+//     }
 
 
+//     //how many have a name that starts with Bob
+//     if( academyMembers[i].name.indexOf("Bob") === 0){
+//         console.log(`${academyMembers[i].name} is in the my name starts with Bob club`);
+//     }
 
+//     //lets put the actors film in its own variabl
+//     let actorsFilms = academyMembers[i].films
+    
 
+//     let startsWithA = false;
+//     for(let i=0; i < actorsFilms.length; i++){
 
+//         if(actorsFilms[i].indexOf("A") === 0){
+//             startsWithA = true;
+//             break;
+//         }
 
+//     }
 
+//     if(startsWithA){
+//         console.log(`${academyMembers[i].name} has been in movies that start with A`)
+//     }
 
-
-
-
-
-
-
-
-
-
-
+// }
 
